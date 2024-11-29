@@ -85,7 +85,7 @@ export default function HomePage() {
               />
             </span>
             which include all the metadata about the payment, are signed by the
-            app so can be 'semi-trusted' based on the app's reputation, and are
+            app so can be semi-trusted based on the apps reputation, and are
             queryable which paves the way for cross-app boosts and comments.
           </p>
           <Divider className="my-4" />
