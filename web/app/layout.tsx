@@ -1,12 +1,11 @@
-// @ts-ignore
+import "@/styles/globals.css";
+
+import clsx from "clsx";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
-import clsx from "clsx";
-
-import "@/styles/globals.css";
-import { Navbar } from "@/components/navbar.js";
-import { Providers } from "./providers.js";
-import { Footer } from "@/components/footer.js";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Pod Pay",

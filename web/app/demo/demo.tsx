@@ -1,13 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// @ts-ignore
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@nextui-org/button";
 import { Slider } from "@nextui-org/slider";
 import { Input } from "@nextui-org/input";
 import { Divider } from "@nextui-org/divider";
-import { Link } from "@/components/link.js";
+import { Link } from "@/components/link";
 
 // Constants
 const STRIKE_OAUTH_STATE_KEY = "STRIKE_OAUTH_STATE";
@@ -210,7 +209,7 @@ export default function PayAPodcastDemo() {
           maxValue={10000}
           value={satoshis}
           onChange={(sats: any) => setSatoshis(sats as number)}
-          getValue={(sats: number) => `${sats.toLocaleString()} sats`}
+          getValue={(sats) => `${sats.toLocaleString()} sats`}
         />
         <Input
           size="sm"

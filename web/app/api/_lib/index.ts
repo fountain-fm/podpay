@@ -1,2 +1,2 @@
-export * as strike from "./strike.js";
-export * from "./payments.js";
+export * as strike from "./strike";
+export * from "./payments";

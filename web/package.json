@@ -1,7 +1,6 @@
 {
   "name": "podpay-web",
   "version": "0.0.1",
-  "type": "module",
   "author": "MerryOscar",
   "scripts": {
     "dev": "next dev --turbo",

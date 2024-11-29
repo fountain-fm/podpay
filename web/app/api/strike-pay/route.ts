@@ -7,7 +7,7 @@ import {
 } from "@fountain/podpay";
 
 // Lib
-import { PaymentSplit, strike } from "../_lib/index.js";
+import { PaymentSplit, strike } from "../_lib/index";
 
 // Constants
 const BOOSTBOT_SIGNER_PUBKEY = process.env.BOOSTBOT_SIGNER_PUBKEY;

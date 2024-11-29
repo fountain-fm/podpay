@@ -6,7 +6,7 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 
-import { GithubIcon } from "./icons.js";
+import { GithubIcon } from "./icons";
 
 export const Navbar = () => {
   return (

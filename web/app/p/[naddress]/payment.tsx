@@ -1,10 +1,9 @@
 "use client";
 
-// @ts-ignore
 import { useParams, notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Divider } from "@nextui-org/divider";
-import { Link } from "@/components/link.js";
+import { Link } from "@/components/link";
 import {
   PodcastPayment,
   loadPaymentByID,
@@ -14,7 +13,6 @@ import {
 export default function PaymentView() {
   const params = useParams<{ naddress: string }>();
   const { naddress } = params;
-  if (!naddress) return notFound();
 
   // load the payment event from a nostr relay
   const [payment, setPayment] = useState<PodcastPayment | null>(null);
@@ -34,6 +32,7 @@ export default function PaymentView() {
     _loadPayment();
   }, [naddress]);
 
+  if (!naddress) return notFound();
   return (
     <section className="flex flex-col items-center justify-center gap-4 md:pt-2">
       <div className="inline-block max-w-xl text-center justify-center">
