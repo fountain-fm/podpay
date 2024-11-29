@@ -35,7 +35,7 @@ export default function HomePage() {
             are hindering adoption, including lack of support from major
             Lightning Wallets, the UX of sharing value block info, and including
             the metadata in the keysend tlv records which limits message size
-            can allow spoofing payments.
+            and can allow spoofing payments.
           </p>
           <Divider className="my-4" />
           <p className="text-md font-bold">Moving to Lightning Address</p>
@@ -76,8 +76,8 @@ export default function HomePage() {
                 href="https://github.com/nostr-protocol/nips"
               />
             </span>
-            is a simple protocol that lets anyone share sign messages in a open
-            and permissionless way. Apps can publish payment information as
+            is a simple protocol that lets anyone share signed messages in a
+            open and permissionless way. Apps can publish payment information as
             <span className="px-1 text-primary">
               <Link
                 text="Generic Payment Events"
