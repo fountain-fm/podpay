@@ -1,0 +1,14 @@
+{
+  "name": "@fountain/podpay",
+  "version": "0.1.5",
+  "exports": "./mod.ts",
+  "tasks": {
+    "dev": "deno test --watch --allow-net",
+    "test": "deno test --allow-net"
+  },
+  "license": "MIT",
+  "imports": {
+    "@nostr/tools": "jsr:@nostr/tools@^2.10.4",
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}
