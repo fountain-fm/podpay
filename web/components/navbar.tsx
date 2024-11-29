@@ -22,6 +22,11 @@ export const Navbar = () => {
             Demo
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/firehose">
+            Firehose
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent
         className="hidden sm:flex gap-4"

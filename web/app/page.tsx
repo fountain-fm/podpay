@@ -63,7 +63,8 @@ export default function HomePage() {
             </span>
             format, we can simplify the user experience for everyone involved,
             and give app developers an easy way to let listeners connect their
-            favourite wallet via OAuth or Nostr Wallet Connect.
+            favourite wallet (Strike, Alby etc) via OAuth or Nostr Wallet
+            Connect.
           </p>
           <Divider className="my-4" />
           <p className="text-md font-bold">

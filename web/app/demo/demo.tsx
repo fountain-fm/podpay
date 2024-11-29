@@ -19,7 +19,7 @@ export const FOUNTAIN_RADIO_GUIDS = [
   ],
 ];
 
-export default function PayAPodcastDemo() {
+export default function PodPayDemo() {
   const router = useRouter();
   const params = useSearchParams();
 
@@ -140,7 +140,7 @@ export default function PayAPodcastDemo() {
     <section className="flex flex-col items-center justify-center gap-4 md:pt-2">
       <div className="inline-block max-w-xl text-center justify-center">
         {/* TITLE */}
-        <h1 className="font-bold text-xl text-primary">Pod Pay - Demo</h1>
+        <h1 className="font-bold text-xl text-primary">Payment Demo</h1>
         <p className="pt-2">
           Connect your
           <span className="px-1 text-secondary">

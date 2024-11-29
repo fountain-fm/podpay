@@ -1,12 +1,12 @@
 "use client";
 
 import { Suspense } from "react";
-import PayAPodcastDemo from "./demo";
+import PodPayDemo from "./demo";
 
 export default function DemoPage() {
   return (
     <Suspense>
-      <PayAPodcastDemo />
+      <PodPayDemo />
     </Suspense>
   );
 }

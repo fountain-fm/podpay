@@ -4,7 +4,7 @@
   "exports": "./mod.ts",
   "tasks": {
     "dev": "deno test --watch --allow-net",
-    "test": "deno test --allow-net"
+    "test": "deno test --allow-all"
   },
   "license": "MIT",
   "imports": {
