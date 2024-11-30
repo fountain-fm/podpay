@@ -31,16 +31,28 @@ export default function FirehoseView() {
     }
   }, []);
 
+  firehose.payments.sort(
+    (a, b) =>
+      (b.nostr.event?.created_at ?? 0) - (a.nostr.event?.created_at ?? 0)
+  );
   return (
     <section className="flex flex-col items-center justify-center gap-4 md:pt-2">
       <div className="inline-block max-w-xl text-center justify-center">
         <h1 className="font-bold text-xl text-primary">Payment Firehose</h1>
         <p className="text-xs py-2">
-          This pay shows the firehose of all payments sent through the
+          This page shows the firehose of all payments sent to the
+          <span className="px-1 text-primary">
+            <Link
+              text="Fountain Radio Test Feed"
+              href="https://podcastindex.org/podcast/7108233"
+            />
+          </span>
+          - either via the
           <span className="px-1 text-primary">
             <Link text="demo page" href="https://podpay.org/demo" />
           </span>
-          Try out the demo and come back to this page to see your payment event!
+          or from apps that have implemented the nostr payment events. Try out
+          the demo and come back to this page to see your payment event!
         </p>
         <Divider className="my-2" />
 
@@ -48,6 +60,7 @@ export default function FirehoseView() {
           <div>loading...</div>
         ) : (
           firehose.payments.map((p) => {
+            const timestamp = new Date((p.nostr.event?.created_at ?? 0) * 1000);
             const satoshis = Math.round(p.amount.value * 10000000);
             const message = p.nostr.event?.content;
             const payer = p.nostr.event?.tags.find((t) => t[0] === "payer");
@@ -60,6 +73,13 @@ export default function FirehoseView() {
                   <pre className="bg-gray-800 text-gray-200 p-3 rounded-lg overflow-x-auto">
                     <code>
                       <p className="text-xs font-bold">Sender - {sender}</p>
+                      <p className="text-xs">
+                        Timestamp -{" "}
+                        {timestamp
+                          .toISOString()
+                          .substring(0, 16)
+                          .replaceAll("T", " ")}
+                      </p>
                       <p className="text-xs">Amount - {satoshis} sats</p>
                       <p className="text-xs">Message - {message}</p>
                       <p className="text-xs">GUIDs - {JSON.stringify(guids)}</p>
